@@ -46,10 +46,12 @@ if (password.length < 8) {
 
 //displaying feedback
 feedbackDiv.style.display = block;
-if (isValid) {
+if ((isValid = "true")) {
   feedbackDiv.textContent = "Registration successful!";
   feedbackDiv.style.color = "#28a745";
-} else {
+} else if ((isValid = "false")) {
   feedbackDiv.innerHTML = message.join("<br>");
   feedbackDiv.style.color = "#dec3545";
+} else {
+  console.log("The feedbackDiv is neither true or false!");
 }
