@@ -24,24 +24,24 @@ form.addEventListener(Submit, function (event) {
 //VALIDATION LOGIC
 //initialize validation variable
 let isValid = true;
-const message = [];
+const messages = [];
 
 //username validation
 if (userName.length < 3) {
   isValid = false;
-  message.push("Username must be at least 3 character long");
+  messages.push("Username must be at least 3 character long");
 }
 
 //email validation
 if (!email.includes("@") || !email.includes(".")) {
   isValid = false;
-  message.push("Please enter a valid email address");
+  messages.push("Please enter a valid email address");
 }
 
 //password validation
 if (password.length < 8) {
   isValid = false;
-  message.push("Password must be at least 8 characters long");
+  messages.push("Password must be at least 8 characters long");
 }
 
 //displaying feedback
@@ -50,7 +50,7 @@ if ((isValid = "true")) {
   feedbackDiv.textContent = "Registration successful!";
   feedbackDiv.style.color = "#28a745";
 } else if ((isValid = "false")) {
-  feedbackDiv.innerHTML = message.join("<br>");
+  feedbackDiv.innerHTML = messages.join("<br>");
   feedbackDiv.style.color = "#dec3545";
 } else {
   console.log("The feedbackDiv is neither true or false!");
