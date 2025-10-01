@@ -51,7 +51,7 @@ if ((isValid = "true")) {
   feedbackDiv.style.color = "#28a745";
 } else if ((isValid = "false")) {
   feedbackDiv.innerHTML = messages.join("<br>");
-  feedbackDiv.style.color = "#dec3545";
+  feedbackDiv.style.color = "#dc3545";
 } else {
   console.log("The feedbackDiv is neither true or false!");
 }
